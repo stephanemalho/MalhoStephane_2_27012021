@@ -3,10 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <title>Reservia</title>
-    <meta
-      name="description"
-      content="L'hébergement de vos reves à portée de clic"
-    />
+    <meta name="description" content="L'hébergement de vos reves à portée de clic"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
   <body>
@@ -22,14 +19,15 @@
     </header>
     <main>
       <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
-      <p>En pleins centre ville ou en pleine nature</p>
-      <form>
-        <!--Ajout d'une barre de recherche-->
-        <p>
-          <input type="search" name="BSearch" id="BSearch" placeholder="Marseille,France"/>
-          <label for="BSearch"></label>
-        </p>
-      </form>
+      <p>En plein centre ville ou en pleine nature</p>
+      <section id="search-bar">
+        <h4>En plein centre ville ou en pleine nature</h4>
+        <form method="post" action="traitement.php">
+            <input type="search" name="search" id="search" placeholder="Marseille, France"/>
+            <label for="search"></label>
+        <button>Rechercher</button>
+        </form>
+      </section>
     </main>
     <footer>
         <div>
