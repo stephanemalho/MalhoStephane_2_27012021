@@ -2,14 +2,15 @@
   /*    Body    */
   body {
     box-sizing: border-box;
-    width: 100%;
-    max-width: 550px;
     font-family: "Raleway",Arial, Helvetica, sans-serif;
-    font-size: 15px;
+    font-size: 1em;
   }
   /*  GENERAL  */
+  a {
+    color: black;
+  }
   h1 {
-    font-size: 18px;
+    font-size: 1.1em;
     font-weight: bold;
     color:black;
   }
@@ -18,21 +19,29 @@
     flex-direction: row;
   }
   h3 {
-    font-size: 12px;
+    font-size: 1em;
     font-weight: bold;
     color: black;
   }
   a {
     text-decoration: none;
+    height: 100%;
   }
   p {
-    font-size: 12px;
+    font-size: 0.8em;
     color: black;
-    opacity: 0.7;
   }
-
-  /*               header             */
+  section {
+    margin: 10px 20px 10px 20Px;
+  }
+  ul li span i {
+    color: darkgray;
+  }
   
+  /*               header             */
+  header {
+    overflow-x: hidden;
+  }
   #header-logo {
     width: 100%;
     height: 80px;
@@ -43,14 +52,18 @@
     position: relative;
   }
   header {
-    width: 100%;
     height: 120px;
-
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
   }
   header img {
-    width: 100px;
+    
     height: 40px;
-    padding: 10px 0 10px 10px;
+    margin: 15px ;
+   
   }
   header nav {
     width: 100%;
@@ -58,19 +71,14 @@
   }
   header a {
     display: flex;
-    justify-content:right;
-    align-items: flex-end;
-    width: 150px;
-    height: 20px;
+    height: 30px;
     text-decoration: none;
-    padding: 0px 15px 0 0;
     color: #0065fc;
     font-weight: bold;
-    text-align: center;
+    margin:30px 15px 0 0;
   }
 
   header nav ul {
-    width: 100%;
     height: 100%;
     justify-content: space-between;
     text-align: center;
@@ -83,51 +91,51 @@
     display: inline-block;
     width: 100%;
     height: 100%;
-    padding: 0px ;
+    margin-top: 0;
+    margin-left: 0px;
+    color: black;
+    ;
+  }
+  header li a:hover {
+    color:#0065fc;
+    border-bottom: 2px solid #0065fc;
   }
 
   /*                  Search bar               */
   #search-bar h1 {
-    width: auto;
-    margin: 5px 20px 5px 20px;
-    padding: 5px 10px 5px 10px;
+    padding: 5px 10px 5px 0;
   }
   #search-bar p {
     position: relative;
-    width: auto;
     height: 20px;
-    font-size: 15px;
-    padding: 10px 5px 10px 10px;
-    margin: 0 20px 0 20px;
-    opacity: 0.7;
+    font-size: 0.9em;
+    padding: 10px 5px 10px 0;
+    
+    
   }
   #search-bar form {
     display: flex;
-    width: auto;
-    height: 40PX;
+    height: 45PX;
     background-color: #f2f2f2;
     border: 1px solid #f2f2f2;
     border-radius: 10px 10px 10px 10px;
-    margin: 20px 40px 10px 40px;
+    
   }
-  #search-bar .fas {
+  #search-bar i {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
     height: 100%;
-    padding: 0px 0 2px 0px;
   }
   #search-bar button {
     width: 52px;
-    height: 42px;
     border: 1px solid #0065fc;
-    border-radius: 10px 10px 10px 10px;
+    border-radius: 12px;
     background-color: #0065fc;
     margin-left: -5px;
     margin-top: -1px;
   }
-  #search-bar button .fas {
+  #search-bar button i {
     color: #f2f2f2;
     display: flex;
     margin-bottom: 6px;
@@ -141,9 +149,13 @@
     border: none;
     font-weight: bold;
     color: black;
-  
+    font-size: 0.9em;
+    outline: 0;
   }
 
+  label {
+    width: 20%;
+  }
   /*                Filters                 */
   #filters p {
     display: flex;
@@ -151,59 +163,54 @@
     align-items: center;
     flex-direction: row;
     font-size: 13px;
-    color: black;
-    opacity: 0.9;
-    padding: 0 15px 15px 15px;
+    margin: 10px 0 25px 0;
   }
-  #filters p .fas {
-    width: 23px;
-    height: 20px;
+  #filters p i {
     background-color: white;
-    border-radius: 25px 25px 25px 25px;
+    border-radius: 50%;
     margin: 0 3px 2px 3px;
     border: 1px solid gray;
+    height: 20px;
+    line-height: 20px;
+    min-width: 20px;
+    text-align: center;
+    color: #0065fc;
+
   }
 
   #filters ul {
     
     flex-wrap: wrap;
     justify-content: space-between;
-    margin: 5px 0px 10px 0px;
-    padding-left: 20px;
-    padding-right: 20px;
+
   }
   #filters li {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: auto;
-    min-width: 90px;
-    height: 40px;
+    /* justify-content: center;
+    align-items: center; */
     border: 2px solid #f2f2f2;
-    border-radius: 20px 20px 20px 20px;
-    margin: 10px 10px 10px 10px;
+    border-radius: 22px;
+    margin-top: 10px;
     font-weight: bold;
-    padding-right: 5px;
+    padding-inline-end: 10px;
   }
 
   #filters h2 {
-    width: 50%;
-    height: 25px;
     font-size: 18px;
     font-weight:bold;
     padding: 20px 0 20px 0px;
-    margin-left: 20px;
-    margin-right: 20px;
+    
   }
-  #filters .fas {
+  #filters li i { 
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 60px;
-    height: 45px;
+    min-width: 40px;
+    line-height: 40px;
+    border-radius: 50%;
     background-color: #deebff;
     color: #0065fc;
-    border-radius: 25px 25px 25px 25px;
+    margin-inline-end: 10px;
   }
   #filters a {
     display: flex;
@@ -216,52 +223,52 @@
   }
   /*              most popular            */
   #most-popular {
+    display: flex;
+    flex-direction: column;
     background-color: #f2f2f2;
-    width: 100%;
-    max-width: 550px;
     height: 100%;
     margin: 10px 0 20px 0;
     padding: 15px 0 25px 0;
+    width: 100%;
   }
   #most-popular article {
     background-color: white;
-    width: auto;
-    height: 120px;
-    margin: 10px 30px 10px 30px;
+    height: 140px;
+    margin: 10px 20px 10px 20px;
     border: 2px solid white;
-    border-radius: 10px 10px 10px 10px;
+    border-radius: 20px 20px 20px 20px;
     box-shadow: 0px 0px 10px 4px #e2e1e1;
   }
   #most-popular figure {
-    width: 100%;
+    display: flex;
+    flex-direction: row;
     height: 98%;
   }
   #most-popular figcaption {
     
-    height: 100%;
+    
     display: flex;
-    justify-content:space-around;
-    align-items:flex-start;
+    padding: 10px 10px 10px 20px;
+    flex-basis: 60%;
+    justify-content: space-between;
     flex-direction: column;
-    align-content: space-between;
-    padding: 5px 12px 5px 12px;
   }
   #most-popular p {
       width: 100%;
   }
   #most-popular h3 {
-     width: 100%;
-     font-size: 14px;
+     
+     font-size: 1rem;
      font-weight: bold;
   }
   #most-popular img {
-    display: flex;
-    position: relative;
-    width: 40%;
-    height: 98%;
+    
+    
+    width: 100%;
     float: left;
     border: 3px solid white;
-    border-radius: 10px 0 0 10px;
+    border-radius: 20px 0 0 20px;
+    object-fit: cover;
   }
   #most-popular h2 {
     display: flex;
@@ -269,31 +276,36 @@
     align-items: center;
     flex-wrap: wrap;
     width: 90%;
-    max-width: 550px;
     height: 50px;
     margin-left: 15px;
     font-size: 18px;
     font-weight: bold;
   }
-  #most-popular .fa-star {
+  #most-popular i {
     color: #0065fc;
   }
-  #most-popular .far {
-    color: lightgray;
+  #most-popular span i {
+    color: #e2e1e1;
   }
-
+  #most-popular h2 i {
+    color: black;
+  }
+  #most-popular div {
+    display: flex;
+    flex-basis: 40%;
+    max-width: 100%;
+  }
+  
   /*                accomodation               */
   #accomodation {
     background-color: white;
-    width: 100%;
-    max-width: 550px;
     height: 100%;
     margin: 10px 0 10px 0;
     padding: 20px 0 20px 0;
   }
+  
   #accomodation  h2 {
     width: 90%;
-    max-width: 550px;
     height: 20px;
     margin-left: 20px;
     font-size: 18px;
@@ -302,10 +314,10 @@
   #accomodation article {
     background-color: white;
     width: auto;
-    height: 190px;
+    height: 200px;
     margin: 20px 30px 20px 30px;
     border: 2px solid white;
-    border-radius: 10px 10px 10px 10px;
+    border-radius: 20px;
     box-shadow: 0px 0px 10px 4px #f2f2f2;
   }
   #accomodation figure {
@@ -315,43 +327,35 @@
   #accomodation img {
     display: flex;
     position: relative;
+    object-fit: cover;
     width: 98%;
-    height: 70%;
+    height: 120px;
     float: bottom;
     border: 3px solid white;
-    border-radius: 10px 10px 0 0;
+    border-radius: 20px 20px 0 0;
   }
 
   #accomodation figcaption {
     display: flex;
     justify-content: space-between;
-    align-content: flex-start;
     flex-direction: column;
-    width: 100%;
-    height: 50px;
-    margin-left: 5px;
+    height: 60px;
+    margin-left: 15px;
+    margin-top:5px;
   }
   #accomodation span a {
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-    font-size: 16px;
-    margin-left: 23px;
-
+    margin-left: 20px;
   }
-  #accomodation .fa-star {
+  #accomodation i {
     color: #0065fc;
   }
-  #accomodation .far {
-    color: lightgray;
+  #accomodation span i {
+    color: #e2e1e1;
   }
-
   /*                     activity               */
 
   #activity {
     background-color: white;
-    width: 100%;
-    max-width: 550px;
     height: 100%;
     margin: 10px 0 10px 0;
     padding: 0px 0 40px 0;
@@ -369,6 +373,9 @@
     margin: 10Px 0 10px 10px;
     font-size: 13px;
     font-weight: bold;
+    display: flex;
+    align-items: center;
+    height: 30px;
   }
   
   #activity article {
@@ -387,24 +394,24 @@
   #activity img {
     display: flex;
     position: relative;
+    object-fit: cover;
     width: 100%;
-    height: 80%;
-    float: bottom;
+    height: 130px;
     border: 0;
     border-radius: 10px 10px 0 0;
   }
+
   /*                FOOTER                 */
 
  footer {
-  width: auto;
-  max-width: 550px;
+  display: flex;
+  flex-direction: column;
   height: 430px;
   background-color: #f2f2f2;
   padding: 20px 0 0 30px;
  }
 
  footer div {
-   width: 80%;
    height: 33%;
    display: inline-flex;
    justify-content:space-around;
