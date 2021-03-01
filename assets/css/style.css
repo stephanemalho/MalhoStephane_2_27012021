@@ -1,15 +1,16 @@
-/*    Body    */
+
 body {
-  box-sizing: border-box;
   font-family: "Raleway", Arial, Helvetica, sans-serif;
-  font-size: 1em;
+  font-size: 1rem;
+  overflow-x: hidden;
+}
+* {
+  box-sizing: border-box;
 }
 /*  GENERAL           GENERAL           GENERAL                GENERAL            */
-a {
-  color: black;
-}
+
 h1 {
-  font-size: 1.1em;
+  font-size: 1.1rem;
   font-weight: bold;
   color: black;
 }
@@ -18,23 +19,27 @@ ul {
   flex-direction: row;
 }
 h3 {
-  font-size: 1em;
+  font-size: 1rem;
   font-weight: bold;
   color: black;
 }
 a {
   text-decoration: none;
   height: 100%;
+  color: black;
 }
 p {
-  font-size: 1em;
+  font-size: 1rem;
   color: black;
 }
 section {
-  margin: 15px 20px 0 20px;
+  padding: 20px;
 }
 ul li span i {
   color: darkgray;
+}
+strong {
+  font-weight: bold;
 }
 /*               header               header              header            */
 #header-logo {
@@ -47,63 +52,62 @@ ul li span i {
   position: relative;
 }
 header {
-  height: 150px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  overflow-x: hidden;
+  align-items: center;
+  margin-top: 20px;
 }
 header img {
-  height: 45px;
-  margin: 20px;
+  margin-left: 20px;
 }
 header nav {
-  width: 100%;
-  height: 18%;
+  flex-basis: 100%;
+  margin-top: 20px;
 }
 header a {
   display: flex;
-  height: 30px;
   text-decoration: none;
   color: #0065fc;
   font-weight: bold;
-  margin: 35px 15px 0 0;
+  margin-right: 20px;
+}
+/*    bouton s'inscrire    */
+header > a:hover {
+  font-size: 1.1rem;
 }
 
 header nav ul {
-  height: 100%;
-  justify-content: space-between;
   text-align: center;
 }
 header li {
-  width: 50%;
-  height: 100%;
+  flex-basis: 50%;
+  padding-bottom: 20px;
+  border-bottom: 2px solid lightgray;
 }
 header li a {
   display: inline-block;
   width: 100%;
   height: 100%;
-  margin-top: 0;
-  margin-left: 0px;
   color: black;
-  border-bottom: 2px solid #e2e1e1;
   font-weight: inherit;
+}
+header li:hover {
+  border-bottom: 2px solid #0065fc;
 }
 header li a:hover {
   color: #0065fc;
-  border-bottom: 2px solid #0065fc;
 }
-
 /*                  Search bar              Search bar             Search bar            */
 #search-bar h1 {
   padding: 5px 10px 10px 0;
-  font-size: 1.4em;
+  font-size: 1.4rem;
 }
 #search-bar p {
   position: relative;
   height: 20px;
-  font-size: 1em;
+  font-size: 1rem;
   padding: 10px 5px 10px 0;
 }
 #search-bar form {
@@ -112,16 +116,19 @@ header li a:hover {
   background-color: #f2f2f2;
   border: 1px solid #f2f2f2;
   border-radius: 15px;
-  margin-top: 20px;
+  margin-top: 40px;
+  width: 300px;
 }
 #search-bar i {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
+  font-size: 1em;
 }
 #search-bar button {
-  width: 63px;
+  min-width: 50px;
+  width: 50px;
   border: 1px solid #0065fc;
   border-radius: 15px;
   background-color: #0065fc;
@@ -131,37 +138,36 @@ header li a:hover {
   color: #f2f2f2;
   display: flex;
   margin-bottom: 6px;
-  font-size: 1.5em;
+  font-size: 1.1rem;
 }
 #search-bar span {
   display: none;
 }
 #search {
-  width: 100%;
-  height: 94%;
   border: none;
   font-weight: bold;
   color: black;
-  font-size: 1em;
+  font-size: 1rem;
   text-indent: 10px;
   outline: 0;
 }
-
+::placeholder {
+  opacity: 1;
+}
 label {
-  width: 20%;
-  font-size: 1.2em;
+  min-width: 50px;
+  font-size: 1.2rem;
+  width: 50px;
 }
+
 /*                Filters                  Filters                 Filters            */
-#filters {
-  margin-top: 10px;
-}
+
 #filters p {
   display: flex;
-  justify-content: flex-start;
-  align-items: baseline;
   flex-direction: row;
-  /* font-size: 1em; */
-  margin: 40px 0 40px 0;
+  font-size: 0.9rem;
+  margin: 25px 0 15px 0;
+  line-height: 20px;
 }
 #filters p i {
   background-color: white;
@@ -171,9 +177,10 @@ label {
   height: 23px;
   line-height: 23px;
   min-width: 23px;
-  font-size: 0.8em;
+  font-size: 0.8rem;
   text-align: center;
   color: #0065fc;
+  padding-bottom: 23px;
 }
 
 #filters ul {
@@ -188,23 +195,25 @@ label {
   font-weight: bold;
   padding-right: 10px;
 }
+#filters li:hover {
+  box-shadow: 2px 5px 6px 2px #d9d9d9;
+  border: none;
+}
 
 #filters h2 {
-  font-size: 1.2em;
+  font-size: 1.1rem;
   font-weight: bold;
-  padding: 25px 0 10px 0px;
+  padding-bottom: 10px;
 }
 #filters li i {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   min-width: 50px;
   line-height: 50px;
   border-radius: 50%;
   background-color: #deebff;
   color: #0065fc;
   margin: -2px 10px -2px -2px;
-  font-size: 1.2em;
+  font-size: 1.2rem;
+  text-align: center;
 }
 #filters a {
   display: flex;
@@ -215,23 +224,23 @@ label {
   text-decoration: none;
   color: black;
 }
+
 /*               MOST POPULAR             MOST POPULAR             MOST POPULAR          */
 #most-popular {
   display: flex;
   flex-direction: column;
   background-color: #f2f2f2;
-  height: 100%;
-  margin: auto;
-  padding: 15px 0 35px 0;
-  width: 100%;
 }
 #most-popular article {
   background-color: white;
   height: 140px;
-  margin: 10px 20px 0 20px;
+  margin-bottom: 10px;
   border: 2px solid white;
   border-radius: 20px;
-  box-shadow: 0px 0px 10px 4px #e2e1e1;
+  box-shadow: 0 0 10px 4px #e2e1e1;
+}
+#most-popular article:hover {
+  box-shadow: 0 5px 10px 4px #7e7e7e;
 }
 #most-popular figure {
   display: flex;
@@ -242,13 +251,12 @@ label {
   display: flex;
   padding: 10px 10px 10px 20px;
   flex-basis: 60%;
-  justify-content: space-between;
   flex-direction: column;
 }
 #most-popular p {
   width: 100%;
-  margin-top: -25px;
-  font-size: 0.9em;
+  font-size: 0.9rem;
+  line-height: 35px;
 }
 #most-popular h3 {
   font-size: 1rem;
@@ -256,103 +264,107 @@ label {
 }
 #most-popular img {
   width: 100%;
-  float: left;
   border: 3px solid white;
   border-radius: 20px 0 0 20px;
   object-fit: cover;
+  max-width: 100%;
+}
+#most-popular ul {
+  margin-top: auto;
 }
 #most-popular h2 {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  width: 90%;
-  height: 50px;
-  margin: 15px 0 0 20px;
-  font-size: 1.3em;
+  margin: 20px 0;
+  font-size: 1.3rem;
   font-weight: bold;
-}
-#most-popular i {
-  color: #0065fc;
-  font-size: 0.7em;
-}
-#most-popular span i {
-  color: #e2e1e1;
 }
 #most-popular h2 i {
   color: black;
-  font-size: 1.1em;
+  font-size: 1.3rem;
   padding-right: 5px;
+}
+#most-popular .blue {
+  color: #0065fc;
+  font-size: 0.7rem;
+}
+#most-popular i {
+  color: #e2e1e1;
+  font-size: 0.7rem;
 }
 #most-popular div {
   display: flex;
   flex-basis: 40%;
-  max-width: 100%;
+  height: 100%;
 }
 
 /*                accomodation               accomodation                accomodation         */
 #accomodation {
   background-color: white;
   height: 100%;
-  margin: 10px 20px 80px 20px;
 }
 
 #accomodation h2 {
-  height: 20px;
-  margin: 40px 0 20px 5px;
-  font-size: 1.4em;
+  margin: 20px 0;
+  font-size: 1.4rem;
   font-weight: bold;
 }
 #accomodation article {
   background-color: white;
   width: auto;
-  height: 200px;
+  height: 190px;
   margin-bottom: 12px;
   border: 2px solid white;
   border-radius: 20px;
   box-shadow: 0px 0px 10px 4px #f2f2f2;
 }
+#accomodation article:hover {
+  box-shadow: 0 5px 10px 4px #7e7e7e;
+}
 #accomodation figure {
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  height: 98%;
+  height: 100%;
 }
 #accomodation img {
-  display: flex;
-  position: relative;
   object-fit: cover;
-  width: 98%;
+  width: 100%;
   height: 120px;
-  float: bottom;
   border: 3px solid white;
   border-radius: 20px 20px 0 0;
 }
 
 #accomodation figcaption {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-direction: column;
   height: 60px;
   margin-left: 15px;
-  margin-top: 5px;
 }
 #accomodation figcaption p {
   font-size: 0.9em;
 }
-#accomodation span a {
+#accomodation > a {
   margin-left: 5px;
-  font-size: 1.1em;
+  font-size: 1.1rem;
   font-weight: bold;
   position: absolute;
   height: auto;
   padding-top: 20px;
 }
-#accomodation i {
+#accomodation > a:hover {
+  font-size: 1.2rem;
+}
+#accomodation .blue {
   color: #0065fc;
-  font-size: 0.8em;
+  font-size: 0.8rem;
 }
-#accomodation span i {
+#accomodation i {
   color: #e2e1e1;
+  font-size: 0.8rem;
 }
+
 /*                     activity               activity              activity             */
 
 #activity {
@@ -366,13 +378,13 @@ label {
   align-items: end;
   margin-left: 20px;
   margin-bottom: 25px;
-  font-size: 1.4em;
+  font-size: 1.4rem;
   font-weight: bold;
   height: 40px;
 }
 #activity h3 {
   margin: 15px 0 10px 15px;
-  font-size: 1em;
+  font-size: 1rem;
   font-weight: bold;
   display: flex;
   align-items: center;
@@ -380,13 +392,14 @@ label {
 }
 
 #activity article {
-  background-color: white;
-  width: auto;
-  height: 190px;
+  height: 180px;
   margin: 22px 20px 22px 20px;
   border: 0;
   border-radius: 20px;
-  box-shadow: 0px 0px 10px 4px #f2f2f2;
+  box-shadow: 0 4px 9px 1px #f2f2f2;
+}
+#activity article:hover {
+  box-shadow: 0 5px 10px 4px #7e7e7e;
 }
 #activity figure {
   width: 100%;
@@ -400,44 +413,36 @@ label {
   height: 130px;
   border: 0;
   border-radius: 20px 20px 0 0;
+  object-position: 50% 40%;
 }
 
 /*                FOOTER                 FOOTER               FOOTER                */
 
 footer {
-  height: 500px;
-  display: flex;
-  flex-direction: column;
-  height: 430px;
   background-color: #f2f2f2;
-  padding: 35px 0 40px 25px;
+  padding: 40px 25px;
 }
 
 footer div {
-  height: 30%;
-  display: inline-flex;
-  justify-content: space-around;
-  flex-direction: column;
-  align-items: flex-start;
   margin-bottom: 30px;
 }
 
 footer ul {
-  display: flex;
-  justify-content: space-between;
   flex-direction: column;
   height: 50%;
 }
 footer li {
-  height: 40px;
   padding-top: 10px;
 }
 footer a {
   color: black;
-  font-size: 1em;
+  font-size: 1rem;
+}
+footer a:hover {
+  text-decoration: underline;
 }
 footer h4 {
-  font-size: 1.1em;
+  font-size: 1.1rem;
   font-weight: bold;
   color: black;
 }
