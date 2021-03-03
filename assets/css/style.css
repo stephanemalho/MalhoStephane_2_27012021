@@ -477,4 +477,18 @@ footer h4 {
     justify-content: space-around;
     padding: 40px 50px;
   }
+  @media only screen and (min-width: 992px) {
+    #most-popular {
+      padding: 40px 15%;
+    }
+    #most-popular h2 {
+      margin: 40px 5%;
+    }
+    #accomodation {
+      padding: 40px 15%;
+    }
+    #activity {
+      padding: 40px 15%;
+    }
+  }
 }
