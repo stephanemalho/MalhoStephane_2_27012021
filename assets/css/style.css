@@ -467,18 +467,18 @@ footer h4 {
     display: flex;
   }
   #activity .child2 article:first-child {
-    flex-basis: 60%;
+    flex-basis: 40%;
   }
   #activity .child2 article:last-child {
-    flex-basis: 40%;
+    flex-basis: 60%;
   }
   #activity .child4 {
     display: flex;
   }
   #activity .child4 article:first-child {
-    flex-basis: 40%;
+    flex-basis: 60%;
   }
   #activity .child4 article:last-child {
-    flex-basis: 60%;
+    flex-basis: 40%;
   }
 }
