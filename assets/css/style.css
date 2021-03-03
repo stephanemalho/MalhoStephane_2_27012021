@@ -7,7 +7,6 @@ body {
   box-sizing: border-box;
 }
 /*  GENERAL           GENERAL           GENERAL                GENERAL            */
-
 h1 {
   font-size: 1.1rem;
   font-weight: bold;
@@ -153,9 +152,7 @@ label {
   font-size: 1.2rem;
   width: 50px;
 }
-
 /*                Filters                  Filters                 Filters            */
-
 #filters p {
   display: flex;
   flex-direction: row;
@@ -175,7 +172,6 @@ label {
   text-align: center;
   color: #0065fc;
 }
-
 #filters ul {
   flex-wrap: wrap;
 }
@@ -191,7 +187,6 @@ label {
 #filters li:hover {
   background-color: #deebff;
 }
-
 #filters h2 {
   font-size: 1.1rem;
   font-weight: bold;
@@ -213,7 +208,6 @@ label {
   align-items: center;
   width: 100%;
 }
-
 /*               MOST POPULAR             MOST POPULAR             MOST POPULAR          */
 #most-popular {
   display: flex;
@@ -286,13 +280,11 @@ label {
   flex-basis: 40%;
   height: 100%;
 }
-
 /*                accomodation               accomodation                accomodation         */
 #accomodation {
   background-color: white;
   height: 100%;
 }
-
 #accomodation h2 {
   margin: 20px 0;
   font-size: 1.4rem;
@@ -323,7 +315,6 @@ label {
   border: 3px solid white;
   border-radius: 20px 20px 0 0;
 }
-
 #accomodation figcaption {
   display: flex;
   justify-content: space-around;
@@ -348,9 +339,7 @@ label {
   color: #e2e1e1;
   font-size: 0.8rem;
 }
-
 /*                     activity               activity              activity             */
-
 #activity {
   margin: 50px 0 10px 0;
   padding: 15px 0 15px 0;
@@ -363,7 +352,6 @@ label {
 #activity h3 {
   margin: 15px 0 10px 10px;
 }
-
 #activity article {
   height: 180px;
   margin: 22px 20px 22px 20px;
@@ -373,7 +361,6 @@ label {
 #activity article:hover {
   box-shadow: 0 5px 10px 4px #7e7e7e;
 }
-
 #activity img {
   object-fit: cover;
   width: 100%;
@@ -381,18 +368,14 @@ label {
   border-radius: 20px 20px 0 0;
   object-position: 50% 40%;
 }
-
 /*                FOOTER                 FOOTER               FOOTER                */
-
 footer {
   background-color: #f2f2f2;
   padding: 40px 25px;
 }
-
 footer div {
   margin-bottom: 30px;
 }
-
 footer ul {
   flex-direction: column;
   height: 50%;
@@ -409,14 +392,11 @@ footer h4 {
   font-weight: bold;
   color: black;
 }
-
 /*             ZONE           MÉDIA          576PX         */
-
 @media only screen and (min-width: 576px) {
   section {
     padding: 40px;
   }
-
   /*                  SEARCH               576                */
   #search-bar span {
     display: inline-block;
@@ -434,9 +414,7 @@ footer h4 {
   #search-bar button i {
     display: none;
   }
-
   /*               MOST        POPULAR       576            */
-
   #most-popular article {
     width: 80%;
     align-self: center;
@@ -444,7 +422,6 @@ footer h4 {
   #most-popular h2 {
     margin-bottom: 40px;
   }
-
   /*               ACCOMODATION            576              */
   #accomodation article {
     flex-basis: 48%;
@@ -480,5 +457,24 @@ footer h4 {
   }
   #activity .child4 article:last-child {
     flex-basis: 40%;
+  }
+}
+@media only screen and (min-width: 798px) {
+  #filters ul {
+    flex-wrap: nowrap;
+  }
+  #most-popular {
+    padding: 40px 10%;
+  }
+  #accomodation {
+    padding: 40px 10%;
+  }
+  #activity {
+    padding: 40px 10%;
+  }
+  footer {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 50px;
   }
 }
