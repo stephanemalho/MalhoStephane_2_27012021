@@ -1,4 +1,3 @@
-
 body {
   font-family: "Raleway", Arial, Helvetica, sans-serif;
   font-size: 1rem;
@@ -117,7 +116,7 @@ header li a:hover {
   border: 1px solid #f2f2f2;
   border-radius: 15px;
   margin-top: 40px;
-  width: 300px;
+  width: max-content;
 }
 #search-bar i {
   display: flex;
@@ -368,50 +367,32 @@ label {
 /*                     activity               activity              activity             */
 
 #activity {
-  background-color: white;
-  height: 100%;
   margin: 50px 0 10px 0;
   padding: 15px 0 15px 0;
 }
 #activity h2 {
-  display: flex;
-  align-items: end;
   margin-left: 20px;
-  margin-bottom: 25px;
   font-size: 1.4rem;
   font-weight: bold;
-  height: 40px;
 }
 #activity h3 {
-  margin: 15px 0 10px 15px;
-  font-size: 1rem;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  height: 30px;
+  margin: 15px 0 10px 10px;
 }
 
 #activity article {
   height: 180px;
   margin: 22px 20px 22px 20px;
-  border: 0;
   border-radius: 20px;
   box-shadow: 0 4px 9px 1px #f2f2f2;
 }
 #activity article:hover {
   box-shadow: 0 5px 10px 4px #7e7e7e;
 }
-#activity figure {
-  width: 100%;
-  height: 98%;
-}
+
 #activity img {
-  display: flex;
-  position: relative;
   object-fit: cover;
   width: 100%;
   height: 130px;
-  border: 0;
   border-radius: 20px 20px 0 0;
   object-position: 50% 40%;
 }
@@ -439,10 +420,136 @@ footer a {
   font-size: 1rem;
 }
 footer a:hover {
-  text-decoration: underline;
+  /* text-decoration: underline; */
+  border-bottom: 1px solid black;
 }
 footer h4 {
   font-size: 1.1rem;
   font-weight: bold;
   color: black;
+}
+
+/*             ZONE           MÉDIA          526PX         */
+
+@media only screen and (min-width: 526px) {
+  section {
+    padding: 40px;
+  }
+  /*                      HEADER        526                   */
+
+  header {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    column-gap: 20px;
+    height: 70px;
+    margin: 0;
+    padding: 0;
+  }
+  header a {
+    align-items: center;
+    grid-column-start: 4;
+    grid-column-end: 5;
+    padding-top: 0;
+  }
+  header > a {
+    margin-top: 5px;
+  }
+  header nav {
+    grid-column-start: 3;
+    grid-row-start: 1;
+    height: 100%;
+    margin: 0;
+  }
+  header nav ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 10px;
+    height: 100%;
+  }
+  header li {
+    border-top: 2px solid lightgray;
+    height: 100%;
+    border-bottom: hidden;
+    padding-bottom: 0;
+  }
+  header li:hover {
+    border-top: 2px solid #0065fc;
+    border-bottom: hidden;
+  }
+  header li a:hover {
+    color: #0065fc;
+  }
+  header li a {
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+  /*                  SEARCH               526                */
+  #search-bar span {
+    display: inline-block;
+    color: white;
+    font-size: 1.4em;
+  }
+  #search-bar button {
+    min-width: 150px;
+    width: 150px;
+    border: 1px solid #0065fc;
+    border-radius: 0 15px 15px 0;
+    background-color: #0065fc;
+    margin: -1px 0 -1px -5px;
+  }
+  #search-bar button i {
+    display: none;
+  }
+  /*                  FILTERS               526              */
+  #filters ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    flex-wrap: nowrap;
+  }
+  /*               MOST        POPULAR       526            */
+  #most-popular article {
+    height: 200px;
+  }
+  #most-popular div {
+    flex-basis: 50%;
+  }
+  #most-popular figcaption {
+    flex-basis: 50%;
+  }
+  /*               ACCOMODATION            526              */
+  #accomodation {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 20px;
+    grid-column-gap: 20px;
+  }
+  #accomodation h2 {
+    grid-column: 1/3;
+  }
+  #accomodation > a {
+    position: relative;
+  }
+  /*               ACTIVITY                526               */
+  #activity {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 20px;
+    margin: inherit;
+  }
+  #activity h2 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  #activity .child1 {
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
+  #activity .child3 {
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 1;
+  }
 }
