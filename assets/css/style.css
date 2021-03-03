@@ -1,4 +1,3 @@
-
 body {
   font-family: "Raleway", Arial, Helvetica, sans-serif;
   font-size: 1rem;
@@ -73,18 +72,13 @@ header a {
   font-weight: bold;
   margin-right: 20px;
 }
-/*    bouton s'inscrire    */
-header > a:hover {
-  font-size: 1.1rem;
-}
-
 header nav ul {
   text-align: center;
 }
 header li {
   flex-basis: 50%;
   padding-bottom: 20px;
-  border-bottom: 2px solid lightgray;
+  border-bottom: 3px solid lightgray;
 }
 header li a {
   display: inline-block;
@@ -94,9 +88,9 @@ header li a {
   font-weight: inherit;
 }
 header li:hover {
-  border-bottom: 2px solid #0065fc;
+  border-bottom: 3px solid #0065fc;
 }
-header li a:hover {
+header li:hover a {
   color: #0065fc;
 }
 /*                  Search bar              Search bar             Search bar            */
@@ -117,7 +111,7 @@ header li a:hover {
   border: 1px solid #f2f2f2;
   border-radius: 15px;
   margin-top: 40px;
-  width: 300px;
+  width: max-content;
 }
 #search-bar i {
   display: flex;
@@ -167,20 +161,19 @@ label {
   flex-direction: row;
   font-size: 0.9rem;
   margin: 25px 0 15px 0;
-  line-height: 20px;
+  line-height: 25px;
 }
 #filters p i {
   background-color: white;
   border-radius: 50%;
   margin: 0 10px 2px 3px;
   border: 1px solid #e2e1e1;
-  height: 23px;
-  line-height: 23px;
-  min-width: 23px;
+  height: 25px;
+  line-height: 25px;
+  min-width: 25px;
   font-size: 0.8rem;
   text-align: center;
   color: #0065fc;
-  padding-bottom: 23px;
 }
 
 #filters ul {
@@ -196,8 +189,7 @@ label {
   padding-right: 10px;
 }
 #filters li:hover {
-  box-shadow: 2px 5px 6px 2px #d9d9d9;
-  border: none;
+  background-color: #deebff;
 }
 
 #filters h2 {
@@ -220,9 +212,6 @@ label {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100%;
-  text-decoration: none;
-  color: black;
 }
 
 /*               MOST POPULAR             MOST POPULAR             MOST POPULAR          */
@@ -240,7 +229,7 @@ label {
   box-shadow: 0 0 10px 4px #e2e1e1;
 }
 #most-popular article:hover {
-  box-shadow: 0 5px 10px 4px #7e7e7e;
+  box-shadow: 0 3px 10px 1px #7e7e7e;
 }
 #most-popular figure {
   display: flex;
@@ -349,12 +338,7 @@ label {
   margin-left: 5px;
   font-size: 1.1rem;
   font-weight: bold;
-  position: absolute;
-  height: auto;
   padding-top: 20px;
-}
-#accomodation > a:hover {
-  font-size: 1.2rem;
 }
 #accomodation .blue {
   color: #0065fc;
@@ -368,50 +352,32 @@ label {
 /*                     activity               activity              activity             */
 
 #activity {
-  background-color: white;
-  height: 100%;
   margin: 50px 0 10px 0;
   padding: 15px 0 15px 0;
 }
 #activity h2 {
-  display: flex;
-  align-items: end;
   margin-left: 20px;
-  margin-bottom: 25px;
   font-size: 1.4rem;
   font-weight: bold;
-  height: 40px;
 }
 #activity h3 {
-  margin: 15px 0 10px 15px;
-  font-size: 1rem;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  height: 30px;
+  margin: 15px 0 10px 10px;
 }
 
 #activity article {
   height: 180px;
   margin: 22px 20px 22px 20px;
-  border: 0;
   border-radius: 20px;
   box-shadow: 0 4px 9px 1px #f2f2f2;
 }
 #activity article:hover {
   box-shadow: 0 5px 10px 4px #7e7e7e;
 }
-#activity figure {
-  width: 100%;
-  height: 98%;
-}
+
 #activity img {
-  display: flex;
-  position: relative;
   object-fit: cover;
   width: 100%;
   height: 130px;
-  border: 0;
   border-radius: 20px 20px 0 0;
   object-position: 50% 40%;
 }
@@ -438,11 +404,81 @@ footer a {
   color: black;
   font-size: 1rem;
 }
-footer a:hover {
-  text-decoration: underline;
-}
 footer h4 {
   font-size: 1.1rem;
   font-weight: bold;
   color: black;
+}
+
+/*             ZONE           MÉDIA          576PX         */
+
+@media only screen and (min-width: 576px) {
+  section {
+    padding: 40px;
+  }
+
+  /*                  SEARCH               576                */
+  #search-bar span {
+    display: inline-block;
+    color: white;
+    font-size: 1.4em;
+  }
+  #search-bar button {
+    min-width: 150px;
+    width: 150px;
+    border: 1px solid #0065fc;
+    border-radius: 0 15px 15px 0;
+    background-color: #0065fc;
+    margin: -1px 0 -1px -5px;
+  }
+  #search-bar button i {
+    display: none;
+  }
+
+  /*               MOST        POPULAR       576            */
+
+  #most-popular article {
+    width: 80%;
+    align-self: center;
+  }
+  #most-popular h2 {
+    margin-bottom: 40px;
+  }
+
+  /*               ACCOMODATION            576              */
+  #accomodation article {
+    flex-basis: 48%;
+  }
+  #accomodation {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  #accomodation h2 {
+    flex-basis: 90%;
+  }
+  /*               ACTIVITY                576               */
+  #activity {
+    margin: 0;
+    padding: 40px;
+  }
+  #activity .child2 {
+    display: flex;
+  }
+  #activity .child2 article:first-child {
+    flex-basis: 40%;
+  }
+  #activity .child2 article:last-child {
+    flex-basis: 60%;
+  }
+  #activity .child4 {
+    display: flex;
+  }
+  #activity .child4 article:first-child {
+    flex-basis: 60%;
+  }
+  #activity .child4 article:last-child {
+    flex-basis: 40%;
+  }
 }
