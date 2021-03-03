@@ -190,7 +190,6 @@ label {
 }
 #filters li:hover {
   background-color: #deebff;
-  
 }
 
 #filters h2 {
@@ -339,8 +338,6 @@ label {
   margin-left: 5px;
   font-size: 1.1rem;
   font-weight: bold;
-  position: absolute;
-  height: auto;
   padding-top: 20px;
 }
 #accomodation .blue {
@@ -413,62 +410,14 @@ footer h4 {
   color: black;
 }
 
-/*             ZONE           MÉDIA          526PX         */
+/*             ZONE           MÉDIA          576PX         */
 
-@media only screen and (min-width: 526px) {
+@media only screen and (min-width: 576px) {
   section {
     padding: 40px;
   }
-  /*                      HEADER        526                   */
 
-  header {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
-    column-gap: 20px;
-    height: 70px;
-    margin: 0;
-    padding: 0;
-  }
-  header a {
-    align-items: center;
-    grid-column-start: 4;
-    grid-column-end: 5;
-    padding-top: 0;
-  }
-  header > a {
-    margin-top: 5px;
-  }
-  header nav {
-    grid-column-start: 3;
-    grid-row-start: 1;
-    height: 100%;
-    margin: 0;
-  }
-  header nav ul {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-column-gap: 10px;
-    height: 100%;
-  }
-  header li {
-    border-top: 2px solid lightgray;
-    height: 100%;
-    border-bottom: hidden;
-    padding-bottom: 0;
-  }
-  header li:hover {
-    border-top: 2px solid #0065fc;
-    border-bottom: hidden;
-  }
-  header li a:hover {
-    color: #0065fc;
-  }
-  header li a {
-    padding: 0;
-    margin: 0;
-    display: flex;
-  }
-  /*                  SEARCH               526                */
+  /*                  SEARCH               576                */
   #search-bar span {
     display: inline-block;
     color: white;
@@ -485,56 +434,51 @@ footer h4 {
   #search-bar button i {
     display: none;
   }
-  /*                  FILTERS               526              */
-  #filters ul {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    flex-wrap: nowrap;
+
+  /*               MOST        POPULAR       576            */
+
+  #most-popular article {
+    width: 80%;
+    align-self: center;
+  }
+  #most-popular h2 {
+    margin-bottom: 40px;
   }
 
-  /*               MOST        POPULAR       526            */
-  #most-popular article {
-    height: 200px;
+  /*               ACCOMODATION            576              */
+  #accomodation article {
+    flex-basis: 48%;
   }
-  #most-popular div {
-    flex-basis: 50%;
-  }
-  #most-popular figcaption {
-    flex-basis: 50%;
-  }
-  /*               ACCOMODATION            526              */
   #accomodation {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-row-gap: 20px;
-    grid-column-gap: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
   #accomodation h2 {
-    grid-column: 1/3;
+    flex-basis: 90%;
   }
-  #accomodation > a {
-    position: relative;
-  }
-  /*               ACTIVITY                526               */
+  /*               ACTIVITY                576               */
   #activity {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 20px;
-    margin: inherit;
+    margin: 0;
+    padding: 40px;
   }
-  #activity h2 {
-    grid-column-start: 1;
-    grid-column-end: 3;
+  #activity .child2 {
+    display: flex;
   }
-  #activity .child1 {
-    grid-row-start: 3;
-    grid-row-end: 4;
-    grid-column-start: 2;
-    grid-column-end: 3;
+  #activity .child2 article:first-child {
+    flex-basis: 60%;
   }
-  #activity .child3 {
-    grid-row-start: 3;
-    grid-row-end: 4;
-    grid-column-start: 1;
+  #activity .child2 article:last-child {
+    flex-basis: 40%;
+  }
+  #activity .child4 {
+    display: flex;
+  }
+  #activity .child4 article:first-child {
+    flex-basis: 40%;
+  }
+  #activity .child4 article:last-child {
+    flex-basis: 60%;
   }
 }
