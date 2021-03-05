@@ -300,7 +300,7 @@ label {
   box-shadow: 0px 0px 10px 4px #f2f2f2;
 }
 #accomodation article:hover {
-  box-shadow: 0 5px 10px 4px #7e7e7e;
+  box-shadow: 0 3px 10px 1px #7e7e7e;
 }
 #accomodation figure {
   display: flex;
@@ -359,7 +359,7 @@ label {
   box-shadow: 0 4px 9px 1px #f2f2f2;
 }
 #activity article:hover {
-  box-shadow: 0 5px 10px 4px #7e7e7e;
+  box-shadow: 0 3px 10px 1px #7e7e7e;
 }
 #activity img {
   object-fit: cover;
@@ -489,6 +489,110 @@ footer h4 {
     }
     #activity {
       padding: 40px 15%;
+    }
+  }
+  @media only screen and (min-width: 1280px) {
+    header,
+    main {
+      max-width: 1280px;
+      margin: auto;
+    }
+    header {
+      height: 100px;
+    }
+    header img {
+      margin-left: 20px;
+    }
+    header li {
+      flex-basis: 50%;
+      padding-top: 20px;
+      border-top: 3px solid lightgray;
+      border-bottom: none;
+      height: 100%;
+    }
+    header > a {
+      text-align: right;
+      margin-left: auto;
+      padding-top: 40px;
+    }
+    header nav {
+      position: absolute;
+      margin-left: 65%;
+      height: 100px;
+      margin-top: 0;
+    }
+    header ul nav {
+      height: 100%;
+    }
+    header li a {
+      padding-top: 20px;
+    }
+    header li:hover {
+      border-top: 3px solid #0065fc;
+      border-bottom: none;
+    }
+    header li:hover a {
+      color: #0065fc;
+    }
+    #bloc {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-around;
+    }
+    /*                     MOST-POPULAR           1280px    */
+    #most-popular {
+      flex-basis: 30%;
+      border-radius: 20px;
+      padding: 0;
+    }
+    /*                     ACCOMODATION            1280px    */
+    #accomodation {
+      padding: 15px;
+      margin: 0 19px;
+      flex-direction: row;
+      flex-basis: 70%;
+      background-color: #f2f2f2;
+      border-radius: 20px;
+    }
+    #accomodation article {
+      margin: 10px;
+      flex-basis: 30%;
+    }
+/*                        ACTIVITY                 1280px    */
+    #activity {
+      margin: 0;
+      padding: 50px 0;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    #activity article {
+      height: 400px;
+    }
+    #activity h2 {
+      flex-basis: 90%;
+    }
+    #activity .child1 {
+      flex-basis: 25%;
+    }
+    #activity .child1 article img {
+      height: 350px;
+    }
+    #activity .child2 {
+      flex-basis: 25%;
+      display: flex;
+      flex-direction: column;
+    }
+    #activity .child3 {
+      flex-basis: 25%;
+    }
+    #activity .child3 article img {
+      height: 350px;
+    }
+    #activity .child4 {
+      flex-basis: 25%;
+      display: flex;
+      flex-direction: column;
     }
   }
 }
