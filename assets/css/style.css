@@ -475,7 +475,10 @@ footer h4 {
   footer {
     display: flex;
     justify-content: space-around;
-    padding: 40px 50px;
+    padding: 50px;
+  }
+  footer div {
+    line-height: 20px;
   }
   @media only screen and (min-width: 992px) {
     #most-popular {
@@ -490,6 +493,13 @@ footer h4 {
     #activity {
       padding: 40px 15%;
     }
+    footer {
+      padding: 50px;
+      justify-content: left;
+    }
+    footer div {
+      margin-right: 15%;
+    }
   }
   @media only screen and (min-width: 1280px) {
     header,
@@ -499,6 +509,7 @@ footer h4 {
     }
     header {
       height: 100px;
+      flex-wrap: nowrap;
     }
     header img {
       margin-left: 20px;
@@ -511,15 +522,16 @@ footer h4 {
       height: 100%;
     }
     header > a {
-      text-align: right;
-      margin-left: auto;
-      padding-top: 40px;
+      padding-top: 43px;
+      order: 1;
+      margin: 0 20px;
+      width: 90px;
     }
     header nav {
-      position: absolute;
-      margin-left: 65%;
+      margin-left: auto;
       height: 100px;
       margin-top: 0;
+      flex-basis: 30%;
     }
     header ul nav {
       height: 100%;
@@ -534,16 +546,28 @@ footer h4 {
     header li:hover a {
       color: #0065fc;
     }
+    /*                     SEARCH BAR              1280PX    */
+    #search-bar {
+      padding: 20px;
+    }
+    /*                     FILTERS                 1280PX    */
+    #filters {
+      padding: 20px;
+    }
     #bloc {
       display: flex;
       flex-direction: row-reverse;
       justify-content: space-around;
     }
-    /*                     MOST-POPULAR           1280px    */
+    /*                     MOST-POPULAR            1280px    */
     #most-popular {
       flex-basis: 30%;
       border-radius: 20px;
       padding: 0;
+      margin-right: 20px;
+    }
+    #most-popular h2 {
+      margin: 40px 20px 30px 20px;
     }
     /*                     ACCOMODATION            1280px    */
     #accomodation {
@@ -558,7 +582,7 @@ footer h4 {
       margin: 10px;
       flex-basis: 30%;
     }
-/*                        ACTIVITY                 1280px    */
+    /*                     ACTIVITY                1280px    */
     #activity {
       margin: 0;
       padding: 50px 0;
@@ -572,6 +596,9 @@ footer h4 {
     #activity h2 {
       flex-basis: 90%;
     }
+    #activity h3 {
+      margin: 10px 0 15px 15px;
+    }
     #activity .child1 {
       flex-basis: 25%;
     }
@@ -583,8 +610,25 @@ footer h4 {
       display: flex;
       flex-direction: column;
     }
+    #activity .child2 article:first-child {
+      flex-basis: 70%;
+      margin: 20px 20px 0 20px;
+    }
+    #activity .child2 article:first-child img {
+      height: 180px;
+    }
+    #activity .child2 article:last-child {
+      flex-basis: 30%;
+    }
+    #activity .child2 article:last-child img {
+      height: 100px;
+    }
     #activity .child3 {
       flex-basis: 25%;
+    }
+
+    #activity figcaption {
+      height: 38px;
     }
     #activity .child3 article img {
       height: 350px;
@@ -593,6 +637,26 @@ footer h4 {
       flex-basis: 25%;
       display: flex;
       flex-direction: column;
+    }
+    #activity .child4 article:last-child {
+      flex-basis: 40%;
+      margin: 0 20px 20px 20px;
+    }
+    #activity .child4 article:last-child img {
+      height: 180px;
+    }
+    #activity .child4 article:first-child {
+      flex-basis: 60%;
+    }
+    #activity .child4 article:first-child img {
+      height: 100px;
+    }
+    footer {
+      padding: 50px 100px;
+      justify-content: left;
+    }
+    footer div {
+      margin-right: 15%;
     }
   }
 }
