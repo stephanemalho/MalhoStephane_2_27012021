@@ -259,7 +259,7 @@ label {
   display: flex;
   justify-content: space-between;
   margin: 20px 0;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: bold;
 }
 #most-popular h2 i {
@@ -474,7 +474,6 @@ footer h4 {
   }
   footer {
     display: flex;
-    justify-content: space-around;
     padding: 50px;
   }
   footer div {
@@ -497,14 +496,11 @@ footer h4 {
       padding: 50px;
       justify-content: left;
     }
-    footer div {
-      margin-right: 15%;
-    }
   }
-  @media only screen and (min-width: 1280px) {
+  @media only screen and (min-width: 1200px) {
     header,
     main {
-      max-width: 1280px;
+      max-width: 1200px;
       margin: auto;
     }
     header {
@@ -516,13 +512,12 @@ footer h4 {
     }
     header li {
       flex-basis: 50%;
-      padding-top: 20px;
-      border-top: 3px solid lightgray;
+      padding: 0;
       border-bottom: none;
       height: 100%;
     }
     header > a {
-      padding-top: 43px;
+      padding-top: 40px;
       order: 1;
       margin: 0 20px;
       width: 90px;
@@ -533,24 +528,31 @@ footer h4 {
       margin-top: 0;
       flex-basis: 30%;
     }
-    header ul nav {
+    header nav ul {
       height: 100%;
     }
     header li a {
-      padding-top: 20px;
+      padding-top: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
     header li:hover {
+      border-bottom: none;
+    }
+    header li a:hover {
       border-top: 3px solid #0065fc;
       border-bottom: none;
+      height: 97%;
     }
     header li:hover a {
       color: #0065fc;
     }
-    /*                     SEARCH BAR              1280PX    */
+    /*                     SEARCH BAR              1200PX    */
     #search-bar {
       padding: 20px;
     }
-    /*                     FILTERS                 1280PX    */
+    /*                     FILTERS                 1200PX    */
     #filters {
       padding: 20px;
     }
@@ -559,7 +561,7 @@ footer h4 {
       flex-direction: row-reverse;
       justify-content: space-around;
     }
-    /*                     MOST-POPULAR            1280px    */
+    /*                     MOST-POPULAR            1200px    */
     #most-popular {
       flex-basis: 30%;
       border-radius: 20px;
@@ -569,7 +571,7 @@ footer h4 {
     #most-popular h2 {
       margin: 40px 20px 30px 20px;
     }
-    /*                     ACCOMODATION            1280px    */
+    /*                     ACCOMODATION            1200px    */
     #accomodation {
       padding: 15px;
       margin: 0 19px;
@@ -582,53 +584,77 @@ footer h4 {
       margin: 10px;
       flex-basis: 30%;
     }
-    /*                     ACTIVITY                1280px    */
+    /*                     ACTIVITY                1200px    */
     #activity {
-      margin: 0;
       padding: 50px 0;
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
+      height: 550px;
+      max-height: 550px;
     }
     #activity article {
       height: 400px;
+      margin: 0 20px 0 20px;
+    }
+    #activity figcaption {
+      height: 50px;
     }
     #activity h2 {
       flex-basis: 90%;
     }
     #activity h3 {
-      margin: 10px 0 15px 15px;
+      padding: 15px 0 10px 10px;
+      margin: 0;
     }
     #activity .child1 {
       flex-basis: 25%;
+      height: 400px;
+      margin: 20px 0 20px 0;
+    }
+    #activity .child1 article .large {
+      height: 100%;
+    }
+    #activity .child1 article div {
+      height: 350px;
     }
     #activity .child1 article img {
-      height: 350px;
+      height: 100%;
     }
     #activity .child2 {
       flex-basis: 25%;
       display: flex;
       flex-direction: column;
+      height: 400px;
+      margin: 20px 0 20px 0;
     }
     #activity .child2 article:first-child {
-      flex-basis: 70%;
-      margin: 20px 20px 0 20px;
+      flex-basis: 60%;
+      margin: 0 20px 0 20px;
     }
-    #activity .child2 article:first-child img {
+    #activity .child2 article:first-child .medium {
+      height: 230px;
+    }
+    #activity .child2 article:first-child div {
       height: 180px;
     }
+    #activity .child2 article:first-child img {
+      height: 100%;
+    }
     #activity .child2 article:last-child {
-      flex-basis: 30%;
+      flex-basis: 20%;
+      margin-top: 20px;
+    }
+    #activity .child2 article:last-child div {
+      height: 100px;
     }
     #activity .child2 article:last-child img {
-      height: 100px;
+      height: 100%;
     }
     #activity .child3 {
       flex-basis: 25%;
-    }
-
-    #activity figcaption {
-      height: 38px;
+      height: 400px;
+      margin: 20px 0 20px 0;
     }
     #activity .child3 article img {
       height: 350px;
@@ -637,26 +663,40 @@ footer h4 {
       flex-basis: 25%;
       display: flex;
       flex-direction: column;
+      height: 400px;
+      margin: 20px 0 20px 0;
     }
     #activity .child4 article:last-child {
       flex-basis: 40%;
-      margin: 0 20px 20px 20px;
+      margin: 0 20px 25px 20px;
     }
-    #activity .child4 article:last-child img {
+    #activity .child4 article:last-child div {
       height: 180px;
     }
-    #activity .child4 article:first-child {
-      flex-basis: 60%;
+    #activity .child4 article:last-child img {
+      height: 100%;
     }
-    #activity .child4 article:first-child img {
+    #activity .child4 article:first-child {
+      flex-basis: 30%;
+      margin-bottom: 20px;
+    }
+    #activity .child4 article:first-child div {
       height: 100px;
     }
-    footer {
-      padding: 50px 100px;
-      justify-content: left;
+    #activity .child4 article:first-child img {
+      height: 100%;
     }
     footer div {
-      margin-right: 15%;
+      margin-right: 10%;
+    }
+    footer > div {
+      display: flex;
+      flex-direction: row;
+      flex-basis: 100%;
+      margin-right: auto;
+    }
+    footer {
+      padding: 50px 10%;
     }
   }
 }
