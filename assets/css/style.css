@@ -94,14 +94,8 @@ header li:hover a {
 }
 /*                  Search bar              Search bar             Search bar            */
 #search-bar h1 {
-  padding: 5px 10px 10px 0;
+  padding: 15px 10px 15px 0;
   font-size: 1.4rem;
-}
-#search-bar p {
-  position: relative;
-  height: 20px;
-  font-size: 1rem;
-  padding: 10px 5px 10px 0;
 }
 #search-bar form {
   display: flex;
@@ -130,7 +124,7 @@ header li:hover a {
 #search-bar button i {
   color: #f2f2f2;
   display: flex;
-  margin-bottom: 6px;
+  /* margin-bottom: 6px; */
   font-size: 1.1rem;
 }
 #search-bar span {
@@ -156,9 +150,9 @@ label {
 #filters p {
   display: flex;
   flex-direction: row;
-  font-size: 0.9rem;
+  font-size: 1rem;
   margin: 25px 0 15px 0;
-  line-height: 25px;
+  line-height: 20px;
 }
 #filters p i {
   background-color: white;
@@ -186,6 +180,7 @@ label {
 }
 #filters li:hover {
   background-color: #deebff;
+  border: 2px solid #deebff;
 }
 #filters h2 {
   font-size: 1.1rem;
@@ -293,7 +288,7 @@ label {
 #accomodation article {
   background-color: white;
   width: auto;
-  height: 190px;
+  height: 200px;
   margin-bottom: 12px;
   border: 2px solid white;
   border-radius: 20px;
@@ -314,6 +309,7 @@ label {
   height: 120px;
   border: 3px solid white;
   border-radius: 20px 20px 0 0;
+  object-position: 50% 60%;
 }
 #accomodation figcaption {
   display: flex;
@@ -321,6 +317,7 @@ label {
   flex-direction: column;
   height: 60px;
   margin-left: 15px;
+  flex-basis:33.3%;
 }
 #accomodation figcaption p {
   font-size: 0.9em;
@@ -350,10 +347,10 @@ label {
   font-weight: bold;
 }
 #activity h3 {
-  margin: 15px 0 10px 10px;
+  margin: 20px 0 10px 15px;
 }
 #activity article {
-  height: 180px;
+  height: 190px;
   margin: 22px 20px 22px 20px;
   border-radius: 20px;
   box-shadow: 0 4px 9px 1px #f2f2f2;
@@ -367,6 +364,9 @@ label {
   height: 130px;
   border-radius: 20px 20px 0 0;
   object-position: 50% 40%;
+}
+#activity .child2 article:first-child img {
+  object-position: 50% 43%;
 }
 /*                FOOTER                 FOOTER               FOOTER                */
 footer {
@@ -568,6 +568,9 @@ footer h4 {
       padding: 0;
       margin-right: 20px;
     }
+    #most-popular article {
+      width: 90%;
+    }
     #most-popular h2 {
       margin: 40px 20px 30px 20px;
     }
@@ -687,16 +690,18 @@ footer h4 {
       height: 100%;
     }
     footer div {
-      margin-right: 10%;
+      flex-basis: 32%;
     }
     footer > div {
       display: flex;
       flex-direction: row;
       flex-basis: 100%;
-      margin-right: auto;
+      max-width:1200px;
+      margin: auto;
+      padding:15px;
     }
     footer {
-      padding: 50px 10%;
+      padding: 50px;
     }
   }
 }
