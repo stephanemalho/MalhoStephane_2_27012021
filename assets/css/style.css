@@ -64,7 +64,7 @@ header nav {
   flex-basis: 100%;
   margin-top: 20px;
 }
-header a {
+header > a {
   display: flex;
   text-decoration: none;
   color: #0065fc;
@@ -104,7 +104,7 @@ header li:hover a {
   border: 1px solid #f2f2f2;
   border-radius: 15px;
   margin-top: 40px;
-  width: max-content;
+  width: min-content;
 }
 #search-bar i {
   display: flex;
@@ -134,9 +134,10 @@ header li:hover a {
   border: none;
   font-weight: bold;
   color: black;
+  
   font-size: 1rem;
-  text-indent: 10px;
-  outline: 0;
+  text-indent: 2%;
+  width: 50vw;
 }
 ::placeholder {
   opacity: 1;
@@ -317,7 +318,7 @@ label {
   flex-direction: column;
   height: 60px;
   margin-left: 15px;
-  flex-basis:33.3%;
+  flex-basis: 33.3%;
 }
 #accomodation figcaption p {
   font-size: 0.9em;
@@ -413,6 +414,9 @@ footer h4 {
   }
   #search-bar button i {
     display: none;
+  }
+  #search {
+    width: min-content;
   }
   /*               MOST        POPULAR       576            */
   #most-popular article {
@@ -696,9 +700,9 @@ footer h4 {
       display: flex;
       flex-direction: row;
       flex-basis: 100%;
-      max-width:1200px;
+      max-width: 1200px;
       margin: auto;
-      padding:15px;
+      padding: 15px;
     }
     footer {
       padding: 50px;
