@@ -1,0 +1,15 @@
+.d-flex {
+    display: flex;
+}
+.f-row {
+   flex-direction: row;
+}
+.f-wrap {
+    flex-wrap: wrap;
+}
+.justify-between {
+    justify-content: space-between;
+}
+.align-center {
+    align-items: center;
+}
