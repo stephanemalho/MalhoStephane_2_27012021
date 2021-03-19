@@ -435,11 +435,11 @@ footer h4 {
     flex-basis: 25%;
   }
   footer > div {
-    display: flex;
-    flex-direction: row;
+    /* display: flex;
+    flex-direction: row; */
     max-width: 1200px;
     margin: auto;
-    justify-content: space-between;
+    /* justify-content: space-between; */
   }
 }
 @media only screen and (min-width: 798px) {
@@ -465,6 +465,9 @@ footer h4 {
     flex-basis: 100%;
   }
   footer > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     margin-left: 3%;
   }
   @media only screen and (min-width: 992px) {
@@ -550,6 +553,18 @@ footer h4 {
     /*                     FILTERS                 1200PX    */
     #filters {
       padding: 20px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    #filters h2 {
+      padding-right: 20px;
+      padding-bottom: 0;
+      display: flex;
+      width: auto;
+      align-items: center;
+    }
+    #filters li {
+      margin-top: 0;
     }
     #bloc {
       display: flex;
