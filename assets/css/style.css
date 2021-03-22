@@ -12,7 +12,7 @@ h1 {
   font-weight: bold;
   color: black;
 }
-ul  {
+ul {
   display: flex;
   flex-direction: row;
 }
