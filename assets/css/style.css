@@ -639,7 +639,7 @@ footer h4 {
       height: 400px;
       margin: 20px 0 20px 0;
     }
-    #activity > div:nth-child(2) article .large {
+    #activity > div:nth-child(2) article figure {
       height: 100%;
     }
     #activity > div:nth-child(2) article div {
@@ -659,7 +659,7 @@ footer h4 {
       flex-basis: 60%;
       margin: 0 20px 0 20px;
     }
-    #activity > div:nth-child(3) article:first-child .medium {
+    #activity > div:nth-child(3) article:first-child figure {
       height: 230px;
     }
     #activity > div:nth-child(3) article:first-child div {
