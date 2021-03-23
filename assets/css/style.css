@@ -332,7 +332,7 @@ label {
   border-radius: 20px 20px 0 0;
   object-position: 50% 40%;
 }
-#activity .child2 article:first-child img {
+#activity > div:nth-child(3) article:first-child img {
   object-position: 50% 43%;
 }
 /*                FOOTER                 FOOTER               FOOTER                */
@@ -410,22 +410,22 @@ footer h4 {
     margin: 0;
     padding: 40px;
   }
-  #activity .child2 {
+  #activity > div:nth-child(3) {
     display: flex;
   }
-  #activity .child2 article:first-child {
+  #activity > div:nth-child(3) article:first-child {
     flex-basis: 40%;
   }
-  #activity .child2 article:last-child {
+  #activity > div:nth-child(3) article:last-child {
     flex-basis: 60%;
   }
-  #activity .child4 {
+  #activity > div:last-child {
     display: flex;
   }
-  #activity .child4 article:first-child {
+  #activity > div:last-child article:first-child {
     flex-basis: 60%;
   }
-  #activity .child4 article:last-child {
+  #activity > div:last-child article:last-child {
     flex-basis: 40%;
   }
   footer {
@@ -598,7 +598,7 @@ footer h4 {
       flex-basis: 30%;
     }
     /*                     ACTIVITY                1200px    */
-    #activity {
+     #activity {
       padding: 50px 0;
       display: flex;
       flex-direction: row;
@@ -619,86 +619,100 @@ footer h4 {
     #activity h3 {
       padding: 15px 0 10px 10px;
       margin: 0;
+    } 
+    /* #activity {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      margin: 0 ;
+      padding: 0 ;
     }
-    #activity .child1 {
+    #activity > h2 {
+      flex-basis: 100%;
+    } */
+    #activity > div {
+      height: 400px;
+      flex-basis: 25%;
+    }
+    #activity > div:nth-child(2) {
       flex-basis: 25%;
       height: 400px;
       margin: 20px 0 20px 0;
     }
-    #activity .child1 article .large {
+    #activity > div:nth-child(2) article .large {
       height: 100%;
     }
-    #activity .child1 article div {
+    #activity > div:nth-child(2) article div {
       height: 350px;
     }
-    #activity .child1 article img {
+    #activity > div:nth-child(2) article img {
       height: 100%;
     }
-    #activity .child2 {
+    #activity > div:nth-child(3) {
       display: flex;
       flex-basis: 25%;
       flex-direction: column;
       height: 400px;
       margin: 20px 0 20px 0;
     }
-    #activity .child2 article:first-child {
+    #activity > div:nth-child(3) article:first-child {
       flex-basis: 60%;
       margin: 0 20px 0 20px;
     }
-    #activity .child2 article:first-child .medium {
+    #activity > div:nth-child(3) article:first-child .medium {
       height: 230px;
     }
-    #activity .child2 article:first-child div {
+    #activity > div:nth-child(3) article:first-child div {
       height: 180px;
     }
-    #activity .child2 article:first-child img {
+    #activity > div:nth-child(3) article:first-child img {
       height: 100%;
     }
-    #activity .child2 article:last-child {
+    #activity > div:nth-child(3) article:last-child {
       flex-basis: 20%;
       margin-top: 20px;
     }
-    #activity .child2 article:last-child div {
+    #activity > div:nth-child(3) article:last-child div {
       height: 100px;
     }
-    #activity .child2 article:last-child img {
+    #activity > div:nth-child(3) article:last-child img {
       height: 100%;
     }
-    #activity .child3 {
+    #activity > div:nth-child(4) {
       flex-basis: 25%;
       height: 400px;
       margin: 20px 0 20px 0;
     }
-    #activity .child3 article img {
+    #activity > div:nth-child(4) article img {
       height: 350px;
     }
-    #activity .child4 {
+    #activity > div:last-child {
       display: flex;
       flex-basis: 25%;
       flex-direction: column;
       height: 400px;
       margin: 20px 0 20px 0;
     }
-    #activity .child4 article:last-child {
+    #activity > div:last-child article:last-child {
       flex-basis: 40%;
       margin: 0 20px 25px 20px;
     }
-    #activity .child4 article:last-child div {
+    #activity > div:last-child article:last-child div {
       height: 180px;
     }
-    #activity .child4 article:last-child img {
+    #activity > div:last-child article:last-child img {
       height: 100%;
     }
-    #activity .child4 article:first-child {
+    #activity > div:last-child article:first-child {
       flex-basis: 30%;
       margin-bottom: 20px;
     }
-    #activity .child4 article:first-child div {
+    #activity > div:last-child article:first-child div {
       height: 100px;
     }
-    #activity .child4 article:first-child img {
+    #activity > div:last-child article:first-child img {
       height: 100%;
-    }
+    } 
     footer > div {
       padding: 2%;
     }
