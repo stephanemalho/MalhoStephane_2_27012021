@@ -40,21 +40,7 @@ strong {
   font-weight: bold;
 }
 /*               header               header              header            */
-#header-logo {
-  width: 100%;
-  height: 80px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: row;
-  position: relative;
-}
 header {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
   margin-top: 20px;
 }
 header img {
@@ -65,7 +51,6 @@ header nav {
   margin-top: 20px;
 }
 header > a {
-  display: flex;
   text-decoration: none;
   color: #0065fc;
   font-weight: bold;
@@ -80,9 +65,6 @@ header li {
   border-bottom: 3px solid lightgray;
 }
 header li a {
-  display: inline-block;
-  width: 100%;
-  height: 100%;
   color: black;
   font-weight: inherit;
 }
@@ -98,7 +80,6 @@ header li:hover a {
   font-size: 1.4rem;
 }
 #search-bar form {
-  display: flex;
   height: 50px;
   background-color: #f2f2f2;
   border: 1px solid #f2f2f2;
@@ -107,9 +88,7 @@ header li:hover a {
   width: min-content;
 }
 #search-bar i {
-  display: flex;
   justify-content: center;
-  align-items: center;
   height: 100%;
   font-size: 1em;
 }
@@ -123,8 +102,6 @@ header li:hover a {
 }
 #search-bar button i {
   color: #f2f2f2;
-  display: flex;
-  /* margin-bottom: 6px; */
   font-size: 1.1rem;
 }
 #search-bar span {
@@ -134,7 +111,7 @@ header li:hover a {
   border: none;
   font-weight: bold;
   color: black;
-
+  outline: 0;
   font-size: 1rem;
   text-indent: 2%;
   width: 50vw;
@@ -149,8 +126,6 @@ label {
 }
 /*                Filters                  Filters                 Filters            */
 #filters p {
-  display: flex;
-  flex-direction: row;
   font-size: 1rem;
   margin: 25px 0 15px 0;
   line-height: 20px;
@@ -161,7 +136,7 @@ label {
   margin: 0 10px 2px 3px;
   border: 1px solid #e2e1e1;
   height: 25px;
-  line-height: 25px;
+  line-height: 23px;
   min-width: 25px;
   font-size: 0.8rem;
   text-align: center;
@@ -206,7 +181,6 @@ label {
 }
 /*               MOST POPULAR             MOST POPULAR             MOST POPULAR          */
 #most-popular {
-  display: flex;
   flex-direction: column;
   background-color: #f2f2f2;
 }
@@ -222,12 +196,9 @@ label {
   box-shadow: 0 3px 10px 1px #7e7e7e;
 }
 #most-popular figure {
-  display: flex;
-  flex-direction: row;
   height: 100%;
 }
 #most-popular figcaption {
-  display: flex;
   padding: 10px 10px 10px 20px;
   flex-basis: 60%;
   flex-direction: column;
@@ -252,8 +223,6 @@ label {
   margin-top: auto;
 }
 #most-popular h2 {
-  display: flex;
-  justify-content: space-between;
   margin: 20px 0;
   font-size: 1.4rem;
   font-weight: bold;
@@ -272,7 +241,6 @@ label {
   font-size: 0.7rem;
 }
 #most-popular div {
-  display: flex;
   flex-basis: 40%;
   height: 100%;
 }
@@ -299,7 +267,6 @@ label {
   box-shadow: 0 3px 10px 1px #7e7e7e;
 }
 #accomodation figure {
-  display: flex;
   flex-direction: column;
   width: 100%;
   height: 100%;
@@ -313,7 +280,6 @@ label {
   object-position: 50% 60%;
 }
 #accomodation figcaption {
-  display: flex;
   justify-content: space-around;
   flex-direction: column;
   height: 60px;
@@ -366,7 +332,7 @@ label {
   border-radius: 20px 20px 0 0;
   object-position: 50% 40%;
 }
-#activity .child2 article:first-child img {
+#activity > div:nth-child(3) article:first-child img {
   object-position: 50% 43%;
 }
 /*                FOOTER                 FOOTER               FOOTER                */
@@ -444,22 +410,22 @@ footer h4 {
     margin: 0;
     padding: 40px;
   }
-  #activity .child2 {
+  #activity > div:nth-child(3) {
     display: flex;
   }
-  #activity .child2 article:first-child {
+  #activity > div:nth-child(3) article:first-child {
     flex-basis: 40%;
   }
-  #activity .child2 article:last-child {
+  #activity > div:nth-child(3) article:last-child {
     flex-basis: 60%;
   }
-  #activity .child4 {
+  #activity > div:last-child {
     display: flex;
   }
-  #activity .child4 article:first-child {
+  #activity > div:last-child article:first-child {
     flex-basis: 60%;
   }
-  #activity .child4 article:last-child {
+  #activity > div:last-child article:last-child {
     flex-basis: 40%;
   }
   footer {
@@ -469,11 +435,11 @@ footer h4 {
     flex-basis: 25%;
   }
   footer > div {
-    display: flex;
-    flex-direction: row;
+    /* display: flex;
+    flex-direction: row; */
     max-width: 1200px;
     margin: auto;
-    justify-content: space-between;
+    /* justify-content: space-between; */
   }
 }
 @media only screen and (min-width: 798px) {
@@ -499,6 +465,9 @@ footer h4 {
     flex-basis: 100%;
   }
   footer > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     margin-left: 3%;
   }
   @media only screen and (min-width: 992px) {
@@ -584,6 +553,18 @@ footer h4 {
     /*                     FILTERS                 1200PX    */
     #filters {
       padding: 20px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    #filters h2 {
+      padding-right: 20px;
+      padding-bottom: 0;
+      display: flex;
+      width: auto;
+      align-items: center;
+    }
+    #filters li {
+      margin-top: 0;
     }
     #bloc {
       display: flex;
@@ -617,7 +598,7 @@ footer h4 {
       flex-basis: 30%;
     }
     /*                     ACTIVITY                1200px    */
-    #activity {
+     #activity {
       padding: 50px 0;
       display: flex;
       flex-direction: row;
@@ -638,93 +619,107 @@ footer h4 {
     #activity h3 {
       padding: 15px 0 10px 10px;
       margin: 0;
+    } 
+    /* #activity {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      margin: 0 ;
+      padding: 0 ;
     }
-    #activity .child1 {
+    #activity > h2 {
+      flex-basis: 100%;
+    } */
+    #activity > div {
+      height: 400px;
+      flex-basis: 25%;
+    }
+    #activity > div:nth-child(2) {
       flex-basis: 25%;
       height: 400px;
       margin: 20px 0 20px 0;
     }
-    #activity .child1 article .large {
+    #activity > div:nth-child(2) article figure {
       height: 100%;
     }
-    #activity .child1 article div {
+    #activity > div:nth-child(2) article div {
       height: 350px;
     }
-    #activity .child1 article img {
+    #activity > div:nth-child(2) article img {
       height: 100%;
     }
-    #activity .child2 {
-      flex-basis: 25%;
+    #activity > div:nth-child(3) {
       display: flex;
+      flex-basis: 25%;
       flex-direction: column;
       height: 400px;
       margin: 20px 0 20px 0;
     }
-    #activity .child2 article:first-child {
+    #activity > div:nth-child(3) article:first-child {
       flex-basis: 60%;
       margin: 0 20px 0 20px;
     }
-    #activity .child2 article:first-child .medium {
+    #activity > div:nth-child(3) article:first-child figure {
       height: 230px;
     }
-    #activity .child2 article:first-child div {
+    #activity > div:nth-child(3) article:first-child div {
       height: 180px;
     }
-    #activity .child2 article:first-child img {
+    #activity > div:nth-child(3) article:first-child img {
       height: 100%;
     }
-    #activity .child2 article:last-child {
+    #activity > div:nth-child(3) article:last-child {
       flex-basis: 20%;
       margin-top: 20px;
     }
-    #activity .child2 article:last-child div {
+    #activity > div:nth-child(3) article:last-child div {
       height: 100px;
     }
-    #activity .child2 article:last-child img {
+    #activity > div:nth-child(3) article:last-child img {
       height: 100%;
     }
-    #activity .child3 {
+    #activity > div:nth-child(4) {
       flex-basis: 25%;
       height: 400px;
       margin: 20px 0 20px 0;
     }
-    #activity .child3 article img {
+    #activity > div:nth-child(4) article img {
       height: 350px;
     }
-    #activity .child4 {
-      flex-basis: 25%;
+    #activity > div:last-child {
       display: flex;
+      flex-basis: 25%;
       flex-direction: column;
       height: 400px;
       margin: 20px 0 20px 0;
     }
-    #activity .child4 article:last-child {
+    #activity > div:last-child article:last-child {
       flex-basis: 40%;
       margin: 0 20px 25px 20px;
     }
-    #activity .child4 article:last-child div {
+    #activity > div:last-child article:last-child div {
       height: 180px;
     }
-    #activity .child4 article:last-child img {
+    #activity > div:last-child article:last-child img {
       height: 100%;
     }
-    #activity .child4 article:first-child {
+    #activity > div:last-child article:first-child {
       flex-basis: 30%;
       margin-bottom: 20px;
     }
-    #activity .child4 article:first-child div {
+    #activity > div:last-child article:first-child div {
       height: 100px;
     }
-    #activity .child4 article:first-child img {
+    #activity > div:last-child article:first-child img {
       height: 100%;
-    }
+    } 
     footer > div {
       padding: 2%;
     }
     footer div {
       flex-basis: 100%;
       max-width: 1200px;
-      margin: auto;
+      margin: 0 auto;
     }
     footer {
       padding: 20px 0;
